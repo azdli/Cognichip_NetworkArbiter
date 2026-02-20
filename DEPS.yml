@@ -1,0 +1,20 @@
+# DEPS configuration for 8x8 Round Robin Arbiter
+
+# Design-only target
+dut_arbiter_8x8:
+  deps:
+    - round_robin_arbiter_8x8.sv
+
+# Testbench simulation target
+sim_arbiter_8x8:
+  deps:
+    - round_robin_arbiter_8x8.sv
+    - tb_arbiter_8x8.sv
+  top: tb_arbiter_8x8
+
+# Switch Arbiter 8x8 simulation target
+sim_switch_arbiter_8x8:
+  deps:
+    - 8/switch_arbiter_8x8.v
+    - 8/tb_switch_arbiter_8x8.v
+  top: tb_switch_arbiter_8x8
